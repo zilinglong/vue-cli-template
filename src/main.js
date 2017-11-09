@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import common from './assets/js/common.js';
 import VueResource from 'vue-resource';
+import axios from 'axios';
+Vue.prototype.$axios = axios;
 Vue.use(common);
 Vue.use(VueResource);
 Vue.config.productionTip = false;
