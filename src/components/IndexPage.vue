@@ -37,7 +37,7 @@
     //     return this.$store.state.count;
     //   }
     // },
-    computed: mapGetters(['count', 'author']),
+    computed: mapGetters(['count']),
     methods: {
       // increment() {
       //   this.$store.dispatch('increment');
@@ -46,9 +46,6 @@
       //   this.$store.dispatch('decrement');
       // },
       ...mapActions(['increment', 'decrement']),
-      addUserName(state, inputTxt) {
-        this.$store.dispatch('author', inputTxt);
-      },
       getData() {
         this.$http.get(`https://cnodejs.org/api/v1/topics`).then((res) => {
           // this.loadingShow = false;
