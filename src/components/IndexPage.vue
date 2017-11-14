@@ -10,9 +10,9 @@
 </template>
 <script>
   import {
-    mapGetters
+    mapGetters,
+    mapActions
   } from 'vuex';
-  // import {mapGetters, mapActions} from 'vuex';
   export default {
     name: 'index',
     data() {
@@ -31,14 +31,14 @@
     //   }
     // },
     computed: mapGetters(['count']),
-    // methods: mapActions(['increment', 'decrement']),
     methods: {
-      increment() {
-        this.$store.dispatch('increment');
-      },
-      decrement() {
-        this.$store.dispatch('decrement');
-      },
+      // increment() {
+      //   this.$store.dispatch('increment');
+      // },
+      // decrement() {
+      //   this.$store.dispatch('decrement');
+      // },
+      ...mapActions(['increment', 'decrement']),
       getData() {
         this.$http.get(`https://cnodejs.org/api/v1/topics`).then((res) => {
           // this.loadingShow = false;
