@@ -24,7 +24,7 @@
     name: 'index',
     data() {
       return {
-        msg: 'hello index.vue',
+        msg: 'hello index.vue'
       };
     },
     mounted() {
