@@ -6,6 +6,11 @@
       <button @click="increment">count+1</button>
       <button @click="decrement">count-1</button>
     </div>
+    <div>
+      <router-link to="/IndexPage">跳转到组件indexPage</router-link>
+      <router-link to="/HelloWorld">跳转到组件HelloWorld</router-link>
+    </div>
+  </div>
   </div>
 </template>
 <script>

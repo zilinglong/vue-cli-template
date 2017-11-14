@@ -18,10 +18,25 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
       <li><button type="button" class="btn btn-primary" @click="clickBtn">按钮</button></li>
     </ul>
+    <div class="vuex-test">
+      <p>count value: {{count}}</p>
+      <div class="btn-group">
+        <button @click="increment">count+1</button>
+        <button @click="decrement">count-1</button>
+      </div>
+      <div>
+        <router-link to="/IndexPage">跳转到组件indexPage</router-link>
+        <router-link to="/HelloWorld">跳转到组件HelloWorld</router-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+  import {
+    mapGetters,
+    mapActions
+  } from 'vuex';
   export default {
     name: 'HelloWorld',
     data() {
@@ -29,7 +44,9 @@
         msg: 'Welcome to Your Vue.js App'
       };
     },
+    computed: mapGetters(['count']),
     methods: {
+      ...mapActions(['increment', 'decrement']),
       clickBtn() {
         // console.log($(this));
         console.log('hello primary btn');
