@@ -19,6 +19,9 @@
       <li><button type="button" class="btn btn-primary" @click="clickBtn">按钮</button></li>
     </ul>
     <div class="vuex-test">
+      <p class="demo1">***********************************</p>
+      <p class="demo1">*************vuex demo1************</p>
+      <p class="demo1">***********************************</p>
       <p>count value: {{count}}</p>
       <div class="btn-group">
         <button @click="increment">count+1</button>

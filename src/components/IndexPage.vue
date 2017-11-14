@@ -1,6 +1,9 @@
 <template>
   <div class="wrap">
     {{msg}}
+    <p class="demo1">***********************************</p>
+    <p class="demo1">*************vuex demo1************</p>
+    <p class="demo1">***********************************</p>
     <p>count value: {{count}}</p>
     <div class="btn-group">
       <button @click="increment">count+1</button>
@@ -10,7 +13,6 @@
       <router-link to="/IndexPage">跳转到组件indexPage</router-link>
       <router-link to="/HelloWorld">跳转到组件HelloWorld</router-link>
     </div>
-  </div>
   </div>
 </template>
 <script>
@@ -22,7 +24,7 @@
     name: 'index',
     data() {
       return {
-        msg: 'hello index.vue'
+        msg: 'hello index.vue',
       };
     },
     mounted() {
@@ -35,7 +37,7 @@
     //     return this.$store.state.count;
     //   }
     // },
-    computed: mapGetters(['count']),
+    computed: mapGetters(['count', 'author']),
     methods: {
       // increment() {
       //   this.$store.dispatch('increment');
@@ -44,6 +46,9 @@
       //   this.$store.dispatch('decrement');
       // },
       ...mapActions(['increment', 'decrement']),
+      addUserName(state, inputTxt) {
+        this.$store.dispatch('author', inputTxt);
+      },
       getData() {
         this.$http.get(`https://cnodejs.org/api/v1/topics`).then((res) => {
           // this.loadingShow = false;
@@ -62,6 +67,8 @@
   };
 </script>
 <style lang="scss">
-
+  .demo2 {
+    margin-top: 20px;
+  }
 
 </style>
