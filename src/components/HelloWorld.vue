@@ -24,8 +24,8 @@
       <p class="demo1">***********************************</p>
       <p>count value: {{count}}</p>
       <div class="btn-group">
-        <button @click="increment">count+1</button>
-        <button @click="decrement">count-1</button>
+        <button @click="increment(5)">count+5</button>
+        <button @click="decrement(2)">count-2</button>
       </div>
       <div>
         <router-link to="/IndexPage">跳转到组件indexPage</router-link>

@@ -1,9 +1,9 @@
 const actions = {
   increment: ({
     commit
-  }) => commit('increment'),
+  }, payload) => commit('increment', payload),
   decrement: ({
     commit
-  }) => commit('decrement')
+  }, payload) => commit('decrement', payload)
 };
 export default actions;
