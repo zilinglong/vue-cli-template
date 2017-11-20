@@ -163,18 +163,15 @@ img {
     height: 40px;
     line-height: 40px
 }
-/*@font-face{
-    font-family: myFont;
-    src:url(../../font/PingFang-SC.ttf);
-}
-body{
-    font-family: myFont!important;
-}*/
+
 select{
     -webkit-appearance:none;
     appearance:none;
     box-shadow: none;
     padding:0.1rem 0.5rem 0.1rem 0.1rem;
+}
+html,body{
+    height: 100%;
 }
 /*弹性盒子*/
 .flex-center,.flex-between,.flex-around,.flex-start{display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;align-items: center;}
