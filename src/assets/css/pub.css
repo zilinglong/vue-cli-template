@@ -34,7 +34,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none }
 html {
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto;
     font-size: 50px;
 }
@@ -47,7 +47,7 @@ body {
     width: 100%;
     font: .28rem/1 -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei";
     font-size:16px;
-    overflow-x:hidden;
+    overflow-x: auto;
     font-family: helvetica,'Microsoft YaHei',arial,sans-serif;
 }
 
