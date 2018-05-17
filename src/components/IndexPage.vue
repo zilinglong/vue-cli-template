@@ -13,6 +13,12 @@
       <router-link to="/IndexPage">跳转到组件indexPage</router-link>
       <router-link to="/HelloWorld">跳转到组件HelloWorld</router-link>
     </div>
+    <section>
+      <p class="global-components">
+        全局组件：indexpage文件展示
+      </p>
+      <global-components :value="msg"></global-components>
+    </section>
   </div>
 </template>
 <script>
@@ -62,6 +68,7 @@
       }
     }
   };
+
 </script>
 <style lang="scss">
   .demo2 {

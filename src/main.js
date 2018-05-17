@@ -10,6 +10,9 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import common from './assets/js/common.js';
 import VueResource from 'vue-resource';
 import axios from 'axios';
+// 引入全局组件
+import globalCom from './components/common/global-comp.js';
+Vue.use(globalCom);
 Vue.prototype.$axios = axios;
 Vue.use(common);
 Vue.use(VueResource);
