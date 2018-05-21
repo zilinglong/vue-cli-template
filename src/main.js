@@ -12,6 +12,9 @@ import VueResource from 'vue-resource';
 import axios from 'axios';
 // 引入全局组件
 import globalCom from './components/common/index.js';
+// 引入插件
+import VuePlugins from './vue-plugins';
+Vue.use(VuePlugins);
 Vue.use(globalCom);
 Vue.prototype.$axios = axios;
 Vue.use(common);

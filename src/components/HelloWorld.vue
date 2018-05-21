@@ -37,6 +37,12 @@
       </p>
       <global-components :value="msg"></global-components>
     </section>
+    <section>
+      <div>
+        (helloword)插件使用展示：
+      </div>
+      <TopBar :title="pluginText"></TopBar>
+    </section>
     </div>
   </div>
 </template>

@@ -19,6 +19,12 @@
       </p>
       <global-components :value="msg"></global-components>
     </section>
+    <section>
+      <div>
+        (IndexPage)插件使用展示：
+      </div>
+      <TopBar :title="pluginText"></TopBar>
+    </section>
   </div>
 </template>
 <script>
@@ -30,7 +36,8 @@
     name: 'index',
     data() {
       return {
-        msg: 'hello index.vue'
+        msg: 'hello index.vue',
+        pluginText: '插件应用'
       };
     },
     mounted() {
@@ -70,7 +77,7 @@
   };
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .demo2 {
     margin-top: 20px;
   }
