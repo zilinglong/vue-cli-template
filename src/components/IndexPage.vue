@@ -25,9 +25,22 @@
       </div>
       <TopBar :title="pluginText"></TopBar>
     </section>
+    <section>
+      <div>slot使用</div>
+      <slotChild>
+        <span slot="text1" @click="slotClick">1234</span>
+        <span slot="text4">5678</span>
+        <!--<span slot="text3">9012</span>-->
+        <!--<div slot="CPU">intel core i7</div>
+        <div slot="GPU">GTX980Ti</div>
+        <div slot="Memory">Kingston 32G</div>
+        <div slot="Hard-drive">Samsung SSD 1T</div>-->
+      </slotChild>
+    </section>
   </div>
 </template>
 <script>
+  import slotChild from './slotChild';
   import {
     mapGetters,
     mapActions
@@ -43,6 +56,9 @@
     mounted() {
       // this.getData();
       // this.axiosGetData();
+    },
+    components: {
+      slotChild
     },
     // 计算属性，获取store中相关属性
     // computed: {
@@ -72,6 +88,9 @@
           let data = response.data;
           console.log(data);
         });
+      },
+      slotClick() {
+        console.log('parent slot is clicked');
       }
     }
   };
