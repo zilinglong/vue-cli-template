@@ -14,6 +14,11 @@ import axios from 'axios';
 import globalCom from './components/common/index.js';
 // 引入插件
 import VuePlugins from './vue-plugins';
+// 引入全局过滤器
+import vfilters from './assets/js/vfilters.js';
+for (let key in vfilters) {
+  Vue.filter(key, vfilters[key]);
+}
 Vue.use(VuePlugins);
 Vue.use(globalCom);
 Vue.prototype.$axios = axios;
@@ -27,5 +32,7 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: {
+    App
+  }
 });

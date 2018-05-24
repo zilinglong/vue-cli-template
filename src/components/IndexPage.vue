@@ -37,6 +37,11 @@
         <div slot="Hard-drive">Samsung SSD 1T</div>-->
       </slotChild>
     </section>
+    <section>
+      <div>全局过滤器filter使用</div>
+      <p>{{50|addMoneyUnit}}</p>
+      <p>{{20|formatMoney(10) }}</p>
+    </section>
   </div>
 </template>
 <script>
