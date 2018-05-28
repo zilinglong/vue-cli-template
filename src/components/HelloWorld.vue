@@ -43,6 +43,13 @@
       </div>
       <TopBar :title="pluginText"></TopBar>
     </section>
+    <section>
+      <div>vuex使用:loginState</div>
+      <p>{{loginState}}</p>
+      <div class="chang-vuex-value">
+        <button @click="changeLoginState">改变loginState的值</button>
+      </div>
+    </section>
     </div>
   </div>
 </template>
@@ -60,11 +67,10 @@
         pluginText: 'pluginText hello word'
       };
     },
-    computed: mapGetters(['count']),
+    computed: mapGetters(['count', 'loginState']),
     methods: {
-      ...mapActions(['increment', 'decrement']),
+      ...mapActions(['increment', 'decrement', 'changeLoginState']),
       clickBtn() {
-        // console.log($(this));
         console.log('hello primary btn');
         $('.btn-primary').text('按钮被点击');
       }

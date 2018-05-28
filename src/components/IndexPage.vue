@@ -42,6 +42,13 @@
       <p>{{50|addMoneyUnit}}</p>
       <p>{{20|formatMoney(10) }}</p>
     </section>
+    <section>
+      <div>vuex使用:loginState</div>
+      <p>{{loginState}}</p>
+      <div class="chang-vuex-value">
+        <button @click="changeLoginState">改变loginState的值</button>
+      </div>
+    </section>
   </div>
 </template>
 <script>
@@ -71,7 +78,10 @@
     //     return this.$store.state.count;
     //   }
     // },
-    computed: mapGetters(['count']),
+    // computed: mapGetters(['count']),
+    computed: {
+      ...mapGetters(['count', 'loginState'])
+    },
     methods: {
       // increment() {
       //   this.$store.dispatch('increment', {amount: 5});
@@ -79,7 +89,7 @@
       // decrement() {
       //   this.$store.dispatch('decrement');
       // },
-      ...mapActions(['increment', 'decrement']),
+      ...mapActions(['increment', 'decrement', 'changeLoginState']),
       getData() {
         this.$http.get(`https://cnodejs.org/api/v1/topics`).then((res) => {
           // this.loadingShow = false;

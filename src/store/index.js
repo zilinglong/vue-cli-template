@@ -5,7 +5,8 @@ import actions from './actions';
 import mutations from './mutations';
 Vue.use(Vuex);
 const state = {
-  count: 0
+  count: 0,
+  loginState: 0
 };
 const store = new Vuex.Store({
   state,
