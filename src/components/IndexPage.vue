@@ -49,6 +49,12 @@
         <button @click="changeLoginState">改变loginState的值</button>
       </div>
     </section>
+    <section>
+      <div>iconfont:使用文字代替图标</div>
+      <div class="iconfont icon-icon"></div>
+      <div class="iconfont icon-brush_fill"></div>
+      <div class="iconfont icon-fanhui"></div>
+    </section>
   </div>
 </template>
 <script>
@@ -114,6 +120,11 @@
 <style lang="scss" scoped>
   .demo2 {
     margin-top: 20px;
+  }
+
+  .iconfont {
+    font-size: 20px; // 定义小icon的大小
+    color: #f00; // 定义小icon的颜色
   }
 
 </style>
