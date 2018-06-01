@@ -73,7 +73,7 @@
     },
     mounted() {
       // this.getData();
-      // this.axiosGetData();
+      this.axiosGetData();
     },
     components: {
       slotChild
@@ -84,7 +84,6 @@
     //     return this.$store.state.count;
     //   }
     // },
-    // computed: mapGetters(['count']),
     computed: {
       ...mapGetters(['count', 'loginState'])
     },
@@ -96,6 +95,7 @@
       //   this.$store.dispatch('decrement');
       // },
       ...mapActions(['increment', 'decrement', 'changeLoginState']),
+      // vue-resource
       getData() {
         this.$http.get(`https://cnodejs.org/api/v1/topics`).then((res) => {
           // this.loadingShow = false;
@@ -103,11 +103,11 @@
           console.log(data);
         });
       },
+      // axios
       axiosGetData() {
         var url = 'https://cnodejs.org/api/v1/topics';
         this.$axios.get(url).then(response => {
-          let data = response.data;
-          console.log(data);
+          console.log(response);
         });
       },
       slotClick() {

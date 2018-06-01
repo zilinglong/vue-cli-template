@@ -26,6 +26,14 @@ Vue.use(common);
 Vue.use(VueResource);
 Vue.use(Vuex);
 Vue.config.productionTip = false;
+// axios--响应拦截
+axios.interceptors.response.use(function (response) {
+  // 处理响应数据
+  return response.data;
+}, function (error) {
+  // 处理响应失败
+  return Promise.reject(error);
+});
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
