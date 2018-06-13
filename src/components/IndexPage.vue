@@ -55,6 +55,15 @@
       <div class="iconfont icon-brush_fill"></div>
       <div class="iconfont icon-fanhui"></div>
     </section>
+    <section>
+      <div>移动端1px border的使用</div>
+      <p class="text">正常边框：</p>
+      <div class="box normal-border"></div>
+      <p class="text">单边框:</p>
+      <div class="box border-1px-one"></div>
+      <p class="text">四条边框:</p>
+      <div class="box border-1px-four"></div>
+    </section>
   </div>
 </template>
 <script>
@@ -125,6 +134,24 @@
   .iconfont {
     font-size: 20px; // 定义小icon的大小
     color: #f00; // 定义小icon的颜色
+  }
+
+  .box {
+    width: 80%;
+    height: 20px;
+    margin: 20px auto;
+  }
+
+  .normal-border {
+    border: 1px solid #000;
+  }
+
+  .border-1px-one {
+    @include border-1px-one(#000);
+  }
+
+  .border-1px-four {
+    @include border-1px-four(#000);
   }
 
 </style>
