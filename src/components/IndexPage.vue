@@ -64,6 +64,10 @@
       <p class="text">四条边框:</p>
       <div class="box border-1px-four"></div>
     </section>
+    <section>
+      <div>移动端项目@2x图和@3x图使用</div>
+      <div class="icon"></div>
+    </section>
   </div>
 </template>
 <script>
@@ -152,6 +156,15 @@
 
   .border-1px-four {
     @include border-1px-four(#000);
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @include bg-image('../assets/images/icon-shanchu');
   }
 
 </style>
