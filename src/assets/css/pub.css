@@ -306,3 +306,9 @@ img {
 .flex-start {
   justify-content: flex-start;
 }
+
+/*placeholder设置*/
+input::-webkit-input-placeholder{color:#aab1c0;font-size: 14px;}/*webkit内核*/
+input:-moz-placeholder{color:#aab1c0;font-size: 14px;}/*Firefox 18-*/
+input::-moz-placeholder{color:#aab1c0;font-size: 14px;}/*Firefox 18+*/
+input:-ms-input-placeholder{color:#aab1c0;font-size: 14px;}/*针对IE*/
