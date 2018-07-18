@@ -68,10 +68,17 @@
       <div>移动端项目@2x图和@3x图使用</div>
       <div class="icon"></div>
     </section>
+    <section>
+      <div>loading插件使用</div>
+      <div class="loading">
+        <vueLoading type="bars" color="#33c3ff" :size="{ width: '50px', height: '50px' }"></vueLoading>
+      </div>
+    </section>
   </div>
 </template>
 <script>
   import slotChild from './slotChild';
+  import vueLoading from 'vue-loading-template';
   import {
     mapGetters,
     mapActions
@@ -89,7 +96,8 @@
       this.axiosGetData();
     },
     components: {
-      slotChild
+      slotChild,
+      vueLoading
     },
     // 计算属性，获取store中相关属性
     // computed: {
